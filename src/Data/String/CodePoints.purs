@@ -319,7 +319,7 @@ lastIndexOf' p i s =
 -- | ```
 -- |
 take :: Int -> String -> String
-take = _take takeFallback
+take i = _take takeFallback (if i > 0 then 0 else 0)
 
 foreign import _take :: (Int -> String -> String) -> Int -> String -> String
 
